@@ -1,1 +1,0 @@
-# OOP-Minchuk-IPZ-3-1
