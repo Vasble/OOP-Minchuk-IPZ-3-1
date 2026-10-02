@@ -1,9 +1,7 @@
 # Лабораторна робота №4. Наслідування: `base`, `virtual`, `override`, `new`
 
-**Дисципліна:** Об'єктно-орієнтоване програмування
 **Варіант:** 13 — ієрархія `Furniture → Chair → Table`
-**Виконав:** _Прізвище Ім'я_, група _XX_
-**Репозиторій:** _https://github.com/<user>/OOP-<Прізвище>_ (проєкт `lab6v13`)
+**Репозиторій:** _https://github.com/Vasble/OOP-Minchuk-IPZ-3-1/edit/master/OOP-Minchuk/lab4v13
 
 ## Мета
 
@@ -12,7 +10,7 @@
 ## Структура проєкту
 
 ```
-OOP-<Прізвище>/
+
 └── lab6v13/
     ├── lab6v13.csproj
     ├── Furniture.cs   // базовий клас
@@ -26,7 +24,7 @@ OOP-<Прізвище>/
 
 ```bash
 dotnet new console -o OOP-<Прізвище>/lab6v13
-cd OOP-<Прізвище>/lab6v13
+cd OOP lab4v13
 dotnet run
 ```
 
@@ -103,10 +101,3 @@ Table (new не використано):   Меблі
 - Виклик залежить від **типу посилання**: через `Furniture` виконується базова версія, через `Chair` виконується версія з `Chair`. Поліморфізму немає.
 - Це може збивати з пантелику й призводити до помилок, тому `new` варто застосовувати рідко. Якщо потрібен поліморфізм, використовують `virtual`/`override`.
 
-## Джерела
-
-- [Наслідування](https://learn.microsoft.com/uk-ua/dotnet/csharp/fundamentals/object-oriented/inheritance)
-- [Ключове слово base](https://learn.microsoft.com/uk-ua/dotnet/csharp/language-reference/keywords/base)
-- [Ключове слово virtual](https://learn.microsoft.com/uk-ua/dotnet/csharp/language-reference/keywords/virtual)
-- [Ключове слово override](https://learn.microsoft.com/uk-ua/dotnet/csharp/language-reference/keywords/override)
-- [Модифікатор new](https://learn.microsoft.com/uk-ua/dotnet/csharp/language-reference/keywords/new-modifier)
