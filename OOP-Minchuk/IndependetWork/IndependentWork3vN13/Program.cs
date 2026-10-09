@@ -93,7 +93,6 @@ namespace sw3v13
             Console.WriteLine("Роботу програми завершено.");
         }
 
-        // гарантовано вийшло з області видимості до виклику GC.Collect()
         static void CreateOrphanObject()
         {
             var pool3 = new ThreadPool(2);
