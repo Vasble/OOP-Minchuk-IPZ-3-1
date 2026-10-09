@@ -20,7 +20,8 @@
 
 ## Консольний вивід
 
-<img width="551" height="574" alt="image" src="https://github.com/user-attachments/assets/4efea099-1ae9-41d1-92ad-6ca157d3ec12" />
+<img width="597" height="235" alt="image" src="https://github.com/user-attachments/assets/37c4e8ce-8ed9-4135-9a4d-3a7718895a94" />
+
 
 
 ### Висновок за результатами
