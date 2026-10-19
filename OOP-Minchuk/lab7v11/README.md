@@ -12,3 +12,4 @@
 - `lab12v11.Tests/` — проєкт xUnit з тестами для всіх методів репозиторію
 
 
+<img width="753" height="350" alt="image" src="https://github.com/user-attachments/assets/8c5a6e9d-9817-4d40-8070-f45c4f4a85b1" />
