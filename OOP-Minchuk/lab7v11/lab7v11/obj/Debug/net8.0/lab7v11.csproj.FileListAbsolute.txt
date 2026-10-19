@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\bin\Debug\net8.0\lab7v11.exe
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\bin\Debug\net8.0\lab7v11.deps.json
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\bin\Debug\net8.0\lab7v11.runtimeconfig.json
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\bin\Debug\net8.0\lab7v11.dll
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\bin\Debug\net8.0\lab7v11.pdb
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\lab7v11.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\lab7v11.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\lab7v11.AssemblyInfo.cs
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\lab7v11.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\lab7v11.sourcelink.json
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\lab7v11.dll
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\refint\lab7v11.dll
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\lab7v11.pdb
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\lab7v11.genruntimeconfig.cache
+C:\Users\User\Desktop\OPP-Lab\Lab1\OOP-Minchuk\lab7v11\lab7v11\obj\Debug\net8.0\ref\lab7v11.dll
