@@ -21,20 +21,6 @@ IndependentWork11/
     └── Program.cs          # запуск і вивід результатів
 ```
 
-## Пайплайни
-
-| № | Метод | Що рахує | Основні оператори |
-|---|-------|----------|-------------------|
-| 1 | `TopProductsByCategory()` | Топ-3 товари за кількістю в кожній категорії | `GroupBy`, `Sum`, `Join`, `GroupBy`, `OrderByDescending`, `Take` |
-| 2 | `RevenueByCity()` | Дохід за містами клієнтів | `Join` ×2, `GroupBy`, `Sum`, `Distinct`, `OrderByDescending` |
-| 3 | `SalesByMonth()` | Одиниці й дохід за роком/місяцем | `Join`, `GroupBy` за складеним ключем, `Sum`, `OrderBy`, `ThenBy` |
-| 4 ⭐ | `TopCustomersWithFavoriteCategory()` | Найцінніші клієнти та їхня улюблена категорія | `Join`, вкладений `GroupBy`, `Aggregate`, `Average`, `Where`, `Take` |
-
-## Запуск
-
-```bash
-dotnet run -c Release --project IndependentWork11
-```
 
 ## Приклад виводу програми
 
