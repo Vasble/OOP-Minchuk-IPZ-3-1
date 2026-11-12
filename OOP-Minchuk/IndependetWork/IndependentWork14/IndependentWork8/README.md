@@ -28,13 +28,6 @@ IndependentWork8/
 | 2. Унікальні теги | `TagManager` | `Dictionary<string, HashSet<string>>` | `AddTag`, `RemoveTag`, `GetTags`, `GetAllUniqueTags` (`UnionWith`), `FindCommonTags` (`IntersectWith`), `FindDifferentTags` (`ExceptWith`) |
 | 3. Пошуковий індекс (додатково) | `SearchIndex` | `Dictionary<string, HashSet<int>>` | `AddDocument`, `Search`, `SearchMultiple` (`IntersectWith`) |
 
-## Запуск
-
-Потрібен .NET 8 SDK.
-
-```bash
-dotnet run --project IndependentWork8
-```
 
 ## Приклад виводу програми
 
