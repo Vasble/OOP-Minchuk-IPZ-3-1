@@ -63,4 +63,9 @@ IndependentWork12/
 3) без побічних ефектів: Count() і ToList()    -> 3 запуски: 67 317/67 317, 67 317/67 317, 67 317/67 317 | завжди правильно |    27,5 мс
 
 ```
+
+
+
+
+
 <img width="848" height="292" alt="image" src="https://github.com/user-attachments/assets/2d8e4a01-3299-459a-ae01-45415780863c" />
