@@ -19,11 +19,6 @@
 
 Зовнішні сервіси імітуються в `Services/SimulatedServices.cs`: вони збоять за заданим сценарієм, тому вивід відтворюваний. Відрізняються лише затримки jitter і мілісекунди.
 
-## Запуск
-
-```bash
-dotnet run --project IndependentWork19
-```
 
 Під час першого запуску `dotnet` завантажить пакет `Polly.Core` з NuGet.
 
