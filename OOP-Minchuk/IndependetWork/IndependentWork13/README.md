@@ -1,14 +1,5 @@
 # Самостійна робота №13 — узагальнений кеш `Cache<TKey, TValue>`
 
-**Дисципліна:** Об'єктно-орієнтоване програмування
-**Тема:** Узагальнений кеш `Cache<TKey, TValue>` із тестами
-
-## Мета
-
-Розробити узагальнений клас кешу, який зберігає дані за ключем і має обмежену ємність.
-Коли кеш заповнений, з нього видаляється найстаріший елемент (політика **FIFO**, First In, First Out).
-Роботу класу перевіряють юніт-тести.
-
 ## Структура репозиторію
 
 ```
@@ -21,104 +12,12 @@ IndependentWork7/
     └── CacheTests.cs               # тести для Cache<TKey, TValue>
 ```
 
-Тестовий проєкт містить посилання на основний проєкт (`ProjectReference`).
 
-## Реалізація
-
-### Приватні поля
-
-| Поле | Тип | Призначення |
-|------|-----|-------------|
-| `_capacity` | `int` | Максимальна кількість елементів у кеші |
-| `_cache` | `Dictionary<TKey, TValue>` | Зберігання пар «ключ — значення», швидкий пошук за O(1) |
-| `_keysOrder` | `Queue<TKey>` | Порядок додавання ключів; на початку черги завжди найстаріший ключ |
-
-### Публічні члени
-
-| Член | Опис |
-|------|------|
-| `Cache(int capacity)` | Створює кеш заданої ємності. Якщо `capacity <= 0`, викидає `ArgumentOutOfRangeException` |
-| `void Add(TKey key, TValue value)` | Додає елемент. Якщо кеш повний, спочатку робить `Dequeue()` і видаляє найстаріший ключ зі словника |
-| `TValue Get(TKey key)` | Повертає значення через `TryGetValue`. Якщо ключа немає, викидає `KeyNotFoundException` |
-| `bool ContainsKey(TKey key)` | Перевіряє, чи є ключ у кеші |
-| `int Count { get; }` | Поточна кількість елементів |
-| `int Capacity { get; }` | Максимальна ємність (додаткова властивість) |
-
-### Як працює FIFO
-
-1. Новий ключ записується в словник і ставиться в кінець черги.
-2. Якщо під час додавання `Count == capacity`, з початку черги береться найстаріший ключ (`Dequeue()`) і видаляється зі словника.
-3. Якщо додати вже наявний ключ, значення оновлюється, а позиція ключа в черзі не змінюється. Так кеш не дублює ключ і не порушує порядок FIFO.
-4. Метод `Get` не змінює порядок витіснення. Саме цим FIFO відрізняється від LRU.
-
-Приклад для ємності 3:
-
-```
-Add(a) Add(b) Add(c)  ->  [a, b, c]
-Add(d)                ->  a витіснено  ->  [b, c, d]
-Add(e)                ->  b витіснено  ->  [c, d, e]
-```
-
-## Юніт-тести
-
-Тести написані на **xUnit** у файлі `IndependentWork7.Tests/CacheTests.cs`.
-
-| Що перевіряється | Тести |
-|------------------|-------|
-| Конструктор | `Constructor_NewCache_IsEmpty`, `Constructor_NonPositiveCapacity_ThrowsArgumentOutOfRangeException` (0 і −5) |
-| Додавання (`Add`) | `Add_SingleItem_ItemIsStored`, `Add_ExistingKey_UpdatesValueWithoutIncreasingCount` |
-| Отримання (`Get`) | `Get_ExistingKey_ReturnsCorrectValue` |
-| `KeyNotFoundException` | `Get_MissingKey_ThrowsKeyNotFoundException`, `Get_EmptyCache_ThrowsKeyNotFoundException` |
-| `ContainsKey` | `ContainsKey_ExistingKey_ReturnsTrue`, `ContainsKey_MissingKey_ReturnsFalse` |
-| `Count` | `Count_AfterAddingItems_EqualsNumberOfItems`, `Count_AfterOverflow_NeverExceedsCapacity` |
-| Переповнення кешу (FIFO) | `Add_WhenFull_RemovesOldestItem`, `Add_SeveralOverflows_RemovesItemsInInsertionOrder`, `Add_WhenFull_GetOfEvictedKeyThrowsKeyNotFoundException`, `Get_DoesNotChangeEvictionOrder_FifoNotLru`, `Add_UpdatingExistingKey_DoesNotMoveItInQueue` |
-
-Разом 17 тестових випадків, усі проходять.
-
-## Запуск
-
-Потрібен .NET 8 SDK.
-
-```bash
-# запуск демонстрації
-dotnet run --project IndependentWork7
-
-# запуск усіх тестів
-dotnet test
-```
 
 ### Приклад виводу програми
 
-```
-=== Демонстрація Cache<string, string> (FIFO) ===
-Створено кеш ємністю 3.
-Додано 3 елементи. Count = 3
-Get("ua") -> Україна
-Get("pl") -> Польща
+<img width="949" height="496" alt="image" src="https://github.com/user-attachments/assets/576fcbab-3a63-41c6-849c-e0a4f6219d72" />
 
-Додаємо "fr" — кеш повний, тому видаляється найстаріший ("ua").
-  ContainsKey("ua"): немає
-  ContainsKey("pl"): є -> Польща
-  ContainsKey("de"): є -> Німеччина
-  ContainsKey("fr"): є -> Франція
-  Count = 3
-
-Додаємо "it" — тепер видаляється "pl".
-  ContainsKey("pl"): немає
-  ContainsKey("de"): є -> Німеччина
-  ContainsKey("fr"): є -> Франція
-  ContainsKey("it"): є -> Італія
-  Count = 3
-
-Спроба отримати видалений ключ "ua":
-KeyNotFoundException: Ключ 'ua' не знайдено в кеші.
-
-=== Демонстрація Cache<int, Student> ===
-Студент #1: немає в кеші
-Студент #2: Андрій, середній бал 4.2
-Студент #3: Марія, середній бал 4.5
-Count = 2
-```
 
 ## Відповіді на контрольні запитання
 
