@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace lab19v11.Exceptions;
+namespace lab13v11.Exceptions;
 
 [Serializable]
 public class PaymentGatewayException : Exception

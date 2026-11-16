@@ -1,8 +1,8 @@
 using System.Text;
-using lab18v11.Helpers;
-using lab18v11.Services;
+using lab12v11.Helpers;
+using lab12v11.Services;
 
-namespace lab18v11;
+namespace lab12v11;
 
 internal class Program
 {

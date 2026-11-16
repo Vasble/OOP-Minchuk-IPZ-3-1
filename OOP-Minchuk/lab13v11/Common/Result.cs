@@ -1,4 +1,4 @@
-namespace lab19v11.Common;
+namespace lab13v11.Common;
 
 public class Result<T>
 {

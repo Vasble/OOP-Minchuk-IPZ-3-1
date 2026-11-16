@@ -2,7 +2,7 @@
 
 **Дисципліна:** Об'єктно-орієнтоване програмування
 **Варіант:** 11 — «Події та їхні учасники з квитками»
-**Проєкт:** `lab17v11` (.NET 8, консольний застосунок)
+**Проєкт:** `lab11v11` (.NET 10, консольний застосунок)
 
 ## Мета
 
@@ -23,8 +23,8 @@
 ## Структура проєкту
 
 ```
-lab17v11/
-├── lab17v11.csproj
+lab11v11/
+├── lab11v11.csproj
 ├── Program.cs                     # Main: демонстрація всіх запитів
 ├── Models/
 │   ├── Event.cs
@@ -76,6 +76,25 @@ public static decimal TotalTicketRevenue(this IEnumerable<Event> events)
 ```
 
 Оскільки метод розширює `IEnumerable<Event>`, його можна викликати на будь-якій вибірці, наприклад на двох найприбутковіших подіях:
+
+```csharp
+decimal topTwo = events
+    .OrderByDescending(e => e.TicketRevenue())
+    .Take(2)
+    .TotalTicketRevenue();
+```
+
+Тут `TicketRevenue()` — допоміжне розширення для однієї події, яке всередині викликає ту саму `TotalTicketRevenue()`. Для тестових даних загальний дохід — 23 650 грн, дохід двох найприбутковіших подій — 13 800 грн.
+
+## Скріншоти роботи програми
+
+Запуск `dotnet run -c Release`, початок виводу (SelectMany):
+
+![Вивід програми, частина 1](screenshots/output-1.png)
+
+Кінець виводу (пагінація і TotalTicketRevenue):
+
+![Вивід програми, частина 2](screenshots/output-2.png)
 
 
 ## Висновок

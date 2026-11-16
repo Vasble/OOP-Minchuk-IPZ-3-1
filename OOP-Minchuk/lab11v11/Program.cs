@@ -1,9 +1,9 @@
 using System.Text;
-using lab17v11.Data;
-using lab17v11.Extensions;
-using lab17v11.Models;
+using lab11v11.Data;
+using lab11v11.Extensions;
+using lab11v11.Models;
 
-namespace lab17v11;
+namespace lab11v11;
 
 internal class Program
 {

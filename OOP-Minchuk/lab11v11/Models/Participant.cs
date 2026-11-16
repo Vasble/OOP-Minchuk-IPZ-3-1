@@ -1,4 +1,4 @@
-namespace lab17v11.Models;
+namespace lab11v11.Models;
 
 public class Participant
 {

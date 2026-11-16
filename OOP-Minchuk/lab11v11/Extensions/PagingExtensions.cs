@@ -1,4 +1,4 @@
-namespace lab17v11.Extensions;
+namespace lab11v11.Extensions;
 
 public static class PagingExtensions
 {

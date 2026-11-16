@@ -1,6 +1,6 @@
-using lab17v11.Models;
+using lab11v11.Models;
 
-namespace lab17v11.Extensions;
+namespace lab11v11.Extensions;
 
 public static class EventExtensions
 {

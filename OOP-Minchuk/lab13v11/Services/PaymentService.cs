@@ -1,8 +1,8 @@
-using lab19v11.Common;
-using lab19v11.Exceptions;
-using lab19v11.Models;
+using lab13v11.Common;
+using lab13v11.Exceptions;
+using lab13v11.Models;
 
-namespace lab19v11.Services;
+namespace lab13v11.Services;
 
 /// <summary>
 /// Сервіс обробки платежів через імітований платіжний шлюз.
