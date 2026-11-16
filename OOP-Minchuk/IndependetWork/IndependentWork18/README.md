@@ -68,4 +68,8 @@ IndependentWork12/
 
 
 
-<img width="848" height="292" alt="image" src="https://github.com/user-attachments/assets/2d8e4a01-3299-459a-ae01-45415780863c" />
+## Скріншоти роботи програми
+
+Запуск `dotnet run -c Release`:
+
+![Вивід програми](screenshots/output-1.png)

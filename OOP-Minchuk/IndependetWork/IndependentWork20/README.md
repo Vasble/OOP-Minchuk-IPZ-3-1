@@ -63,6 +63,16 @@ delay = initialDelay * Math.Pow(2, retryAttempt) * (1 + random.NextDouble() * ji
 dotnet run --project IndependentWork14
 ```
 
+## Скріншоти роботи програми
+
+Запуск `dotnet run -c Release`, початок виводу:
+
+![Вивід програми, частина 1](screenshots/output-1.png)
+
+Кінець виводу:
+
+![Вивід програми, частина 2](screenshots/output-2.png)
+
 ## Приклад виводу програми
 
 Затримки щоразу трохи інші, бо працює jitter.
